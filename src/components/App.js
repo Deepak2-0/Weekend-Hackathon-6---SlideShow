@@ -15,7 +15,7 @@ const App = (props) => {
   function handleClick(action) {
     //console.log(action);
     if (action === "prev") {
-      if (show.index === 0) return;
+      //if (show.index === 0) return;
 
       let index = show.index - 1;
       // console.log(index);
@@ -30,7 +30,7 @@ const App = (props) => {
         text
       });
     } else if (action === "next") {
-      if (show.index === slides.length - 1) return;
+      //if (show.index === slides.length - 1) return;
 
       let index = show.index + 1;
       let title = slides[index].title;
