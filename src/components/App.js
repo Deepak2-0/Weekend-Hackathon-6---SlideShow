@@ -53,15 +53,24 @@ const App = (props) => {
   return (
     <>
       <View key={show.index} title={show.title} text={show.text} />
-      <button onClick={() => handleClick("prev")} data-testid="button-prev">
+      <button
+        onClick={() => handleClick("prev")}
+        data-testid="button-prev"
+        disabled={show.index === 0 ? true : false}
+      >
         Prev
       </button>
-      <button onClick={() => handleClick("next")} data-testid="button-next">
+      <button
+        onClick={() => handleClick("next")}
+        data-testid="button-next"
+        disabled={show.index === slides.length - 1 ? true : false}
+      >
         Next
       </button>
       <button
         onClick={() => handleClick("restart")}
         data-testid="button-restart"
+        disabled={show.index === 0 ? true : false}
       >
         Restart
       </button>
